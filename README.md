@@ -65,24 +65,12 @@
 
 <h2>Usage</h2>
 
-<p>To use the project:</p>
-<ol>
-    <li>Clone the repository to your local machine.</li>
-    <li>Install the required dependencies using <code>pip install -r requirements.txt</code>.</li>
-    <li>Place the MRI images in appropriate folders as mentioned in the Data section.</li>
-    <li>Run the main Python script to preprocess the data, train the model, and evaluate its performance.</li>
-    <li>After training, use the model to make predictions on new MRI images using the provided prediction script.</li>
-</ol>
 
 <h2>Contributors</h2>
 
 <ul>
-    <li><strong>Your Name</strong></li>
+    <li><strong>Shivam Singh</strong></li>
 </ul>
-
-<h2>License</h2>
-
-<p>This project is licensed under the <a href="LICENSE">MIT License</a>.</p>
 
 </body>
 </html>
