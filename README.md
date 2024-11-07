@@ -47,4 +47,61 @@ The following Python libraries are required:
 - **Pillow**: For image preprocessing.
 
 ### requirements.txt
+tensorflow==2.18.0 
+numpy==1.23.5 
+pandas==1.5.3 
+scikit-learn==1.2.2 
+matplotlib==3.7.1 
+Pillow==9.3.0
 
+## How to Run the Code
+
+### 1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/brain-tumor-detection.git
+```
+
+### 2.Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Place the MRI images in appropriate folders:
+Ensure your dataset is structured as follows
+
+```bash
+datasets/
+  yes/
+    image1.jpg
+    image2.jpg
+    ...
+  no/
+    image1.jpg
+    image2.jpg
+    ...
+  pred/
+    image1.jpg
+    image2.jpg
+    ...
+```
+
+### 4.Run the script:
+```bash
+python model.py
+```
+### This will:
+
+1. Preprocess the images.
+2. Train the CNN model.
+3. Evaluate its performance.
+4. Make predictions on new MRI images.
+
+### Evaluation Metrics
+After training, the model's performance is evaluated using:
+
+1. Accuracy: The percentage of correctly classified images.
+2. Loss: The error between the predicted and true labels.
+3. Precision, Recall, F1-score: Additional metrics to assess the model's effectiveness.
+
+### Contributors
+Shivam Singh: Project Author
