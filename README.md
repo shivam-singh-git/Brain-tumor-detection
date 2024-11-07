@@ -1,76 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
-<body>
+# Brain Tumor Detection using Convolutional Neural Networks (CNNs)
 
-<h1>Brain Tumor Detection using Convolutional Neural Networks (CNNs)</h1>
+## Overview
 
-<h2>Overview</h2>
+This project aims to detect brain tumors from medical images using Convolutional Neural Networks (CNNs). The CNN model is trained on a dataset consisting of images labeled as either containing a tumor or not. The trained model is then used to predict tumor presence in unseen MRI images.
 
-<p>This project aims to detect brain tumors from medical images using Convolutional Neural Networks (CNNs). The CNN model is trained on a dataset consisting of brain MRI images labeled as either containing a tumor or not. The trained model is then used to predict tumor presence in unseen MRI images.</p>
+## Project Structure
 
-<h2>Project Structure</h2>
+### Code:
+The code is written in Python and utilizes Keras with a TensorFlow backend to build and train the CNN model. It includes the following scripts:
+- **Data Preprocessing**: Prepares the data for training by resizing and normalizing the images.
+- **Model Building**: Defines the architecture of the CNN model for tumor detection.
+- **Training**: Trains the model on the training dataset.
+- **Evaluation**: Evaluates the performance of the model on a separate test dataset.
+- **Prediction**: Uses the trained model to predict tumor presence in new MRI images.
 
-<ul>
-    <li><strong>Code:</strong>
-        <ul>
-            <li>The code is written in Python using the Keras library with TensorFlow backend for building and training the CNN model.</li>
-            <li>It includes scripts for data preprocessing, model building, training, evaluation, and prediction.</li>
-            <li>Key components such as data loading, model architecture definition, training, and evaluation are documented within the code.</li>
-        </ul>
-    </li>
-    <li><strong>Data:</strong>
-        <ul>
-            <li>The dataset consists of brain MRI images stored in folders labeled 'yes' and 'no', representing images with and without tumors, respectively.</li>
-            <li>Additionally, there is a folder 'pred' containing MRI images for prediction.</li>
-        </ul>
-    </li>
-    <li><strong>Usage:</strong>
-        <ul>
-            <li>To use the project:
-                <ol>
-                    <li>Place the MRI images in appropriate folders ('yes' for tumor images, 'no' for non-tumor images, and 'pred' for prediction images).</li>
-                    <li>Run the provided Python script to preprocess the data, build and train the CNN model, and evaluate its performance.</li>
-                    <li>After training, use the model to predict tumor presence in new MRI images.</li>
-                </ol>
-            </li>
-        </ul>
-    </li>
-    <li><strong>Results:</strong>
-        <ul>
-            <li>After training, the model's performance metrics such as accuracy, loss, and confusion matrix are evaluated.</li>
-            <li>Predictions on new MRI images are made using the trained model, and the results are displayed.</li>
-        </ul>
-    </li>
-</ul>
+### Data:
+The dataset consists of MRI images stored in folders:
+- **yes/**: Images containing a tumor.
+- **no/**: Images without a tumor.
+- **pred/**: MRI images for prediction.
 
-<h2>Model Architecture</h2>
+### Results:
+After training the model, performance metrics such as accuracy, loss, precision, recall, and F1-score are evaluated. The model then makes predictions on new MRI images.
 
-<p>The CNN model architecture consists of several convolutional layers followed by max-pooling layers, batch normalization, dropout, and dense layers for classification. The model is compiled with the Adam optimizer and categorical cross-entropy loss function.</p>
+## Model Architecture
 
-<h2>Evaluation</h2>
+The CNN model architecture consists of several convolutional layers followed by max-pooling layers, batch normalization, dropout, and dense layers for classification. The model is compiled with the Adam optimizer and binary cross-entropy loss function. The output layer uses a sigmoid activation function for binary classification (tumor/no tumor).
 
-<p>The model is evaluated on a separate test dataset to assess its performance. Metrics such as accuracy, loss, precision, recall, and F1-score are computed to evaluate the model's effectiveness in tumor detection.</p>
+## Training
 
-<h2>Dependencies</h2>
+- **Batch size**: 32
+- **Epochs**: 15
+- **Optimizer**: Adam
+- **Loss function**: Binary Cross-Entropy
 
-<p>The project requires the following dependencies:</p>
-<ul>
-    <li>Python 3.x</li>
-    <li>Keras with TensorFlow backend</li>
-    <li>NumPy</li>
-    <li>pandas</li>
-    <li>Matplotlib</li>
-    <li>scikit-learn</li>
-</ul>
+The model is trained to classify images as containing a tumor or not, using the training data, and then evaluated on a separate test dataset.
 
-<h2>Usage</h2>
+## Dependencies
 
+The following Python libraries are required:
+- **tensorflow**: For building and training the CNN model.
+- **numpy**: For numerical operations.
+- **pandas**: For data manipulation.
+- **matplotlib**: For plotting training graphs and evaluating results.
+- **scikit-learn**: For additional evaluation metrics like precision, recall, and F1-score.
+- **Pillow**: For image preprocessing.
 
-<h2>Contributors</h2>
+### requirements.txt
 
-<ul>
-    <li><strong>Shivam Singh</strong></li>
-</ul>
-
-</body>
-</html>
